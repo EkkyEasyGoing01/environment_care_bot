@@ -16,9 +16,9 @@ async def on_ready():
 
 @bot.command()
 async def idesampah(ctx):
-    img_name = random.choice(os.lisdir("kerajinan"))
+    img_name = random.choice(os.listdir("kerajinan"))
     with open (f'kerajinan/[img_name]', 'rb') as gambar: #membuka file gambar dan disimpan di variavbel
         picture = discord.File(gambar)
-    await ctx.send(picture)
+    await ctx.send(file = picture)
 
 bot.run('your token here') #masukkan token-mu disini
