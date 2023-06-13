@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix='$', intents=intents)
 async def on_ready():
     print("Bot telah siap!")
 
-@bot.commands()
+@bot.command()
 async def idesampah(ctx):
     img_name = random.choice(os.lisdir("kerajinan"))
     with open (f'kerajinan/[img_name]', 'rb') as gambar: #membuka file gambar dan disimpan di variavbel
